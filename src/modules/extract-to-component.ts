@@ -4,11 +4,13 @@ import {
   showInputBox,
   activeFileName,
   importMissingDependencies,
+  currentEditorPath,
+  workspaceRoot,
 } from "../editor";
 
 import { showDirectoryPicker } from "../directories-picker";
 
-import { showFilePicker } from "../file-picker";
+import { completeToFullFilePath, promptFileNameInput, showFilePicker } from "../file-picker";
 import * as path from "path";
 import { importReactIfNeeded } from "./jsx";
 
@@ -21,7 +23,7 @@ import {
   ProcessedSelection,
 } from "../code-actions";
 import * as t from "@babel/types";
-import { persistFileSystemChanges, appendTextToFile } from "../file-system";
+import { persistFileSystemChanges, appendTextToFile, createFileIfDoesntExist } from "../file-system";
 import { jsxToAst } from "../parsing";
 import { capitalizeFirstLetter } from "../utils";
 import { transformFromAst } from "@babel/core";
@@ -130,8 +132,15 @@ export async function extractJSXToComponentToFile() {
   }
 
   try {
-    const folderPath = await showDirectoryPicker();
+    // const folderPath = await showDirectoryPicker();
+    const folderPath = currentEditorPath()
+    console.log('folderPath', folderPath);
     const filePath = await showFilePicker(folderPath);
+    console.log('filePath', filePath);
+
+    const fullPath = path.join(folderPath, filePath)
+    console.log('fullPath', fullPath);
+    createFileIfDoesntExist(fullPath)
 
     const componentName = produceComponentNameFrom(filePath);
     const selectionProccessingResult = await wrapWithComponent(

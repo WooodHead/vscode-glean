@@ -26,6 +26,44 @@
   ],
   "main": "./out/extension",
   "contributes": {
+    "commands": [
+      {
+        "command": "extension.glean.react.render-conditionally",
+        "title": "glean-render-conditionally"
+      },
+      {
+        "command": "extension.glean.react.extract-component",
+        "title": "glean.extract-component"
+      },
+      {
+        "command": "extension.glean.react.extract-component-to-file",
+        "title": "glean.extract-component-to-file"
+      },
+      {
+        "command": "extension.glean.react.stateless-to-stateful",
+        "title": "glean.stateless-to-stateful"
+      },
+      {
+        "command": "extension.glean.react.stateful-to-stateless",
+        "title": "glean.stateful-to-stateless"
+      },
+      {
+        "command": "extension.glean.react.rename-state-hook",
+        "title": "glean.rename-state-hook"
+      },
+      {
+        "command": "extension.glean.react.wrap-with-useeffect",
+        "title": "glean.wrap-with-useeffect"
+      },
+      {
+        "command": "extension.glean.react.wrap-with-usecallback",
+        "title": "glean.wrap-with-usecallback"
+      },
+      {
+        "command": "extension.glean.react.wrap-with-usememo",
+        "title": "extension.glean.react.wrap-with-usememo"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Glean",
