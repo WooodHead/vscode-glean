@@ -1,6 +1,6 @@
 {
   "name": "glean-react-refactor",
-  "displayName": "glean",
+  "displayName": "glean-react-refactor",
   "description": "The extension provides refactoring tools for your React codebase",
   "version": "4.8.1",
   "publisher": "WooodHead",
