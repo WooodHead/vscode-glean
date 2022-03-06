@@ -2,7 +2,7 @@
   "name": "glean-react-refactor",
   "displayName": "glean-react-refactor",
   "description": "The extension provides refactoring tools for your React codebase",
-  "version": "4.8.1",
+  "version": "4.8.2",
   "publisher": "WooodHead",
   "engines": {
     "vscode": "^1.23.0"
