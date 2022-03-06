@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { codeToAst, templateToAst } from "../parsing";
 import traverse from "@babel/traverse";
 import template from "@babel/template";
