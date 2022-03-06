@@ -116,9 +116,9 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "build": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
+    "build": "vsce package -o ./packages",
     "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "semantic-release": "semantic-release"
   },
