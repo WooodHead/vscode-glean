@@ -28,7 +28,6 @@ function filesInDirectoryQuickPicksList(directory) {
 }
 
 export function showFilePicker(directory) {
-  console.log('directory', directory);
   // return showQuickPicksList(filesInDirectoryQuickPicksList(directory), 'Select File to extract to')
   //   .then(extractQuickPickValue)
   //   .then(cancelActionIfNeeded)

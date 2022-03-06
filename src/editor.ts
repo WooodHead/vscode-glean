@@ -19,7 +19,6 @@ export const config = () => vscode.workspace.getConfiguration("glean");
 
 export function currentEditorPath(): string {
   const activeEditor = vscode.window.activeTextEditor;
-  console.log('activeEditor', activeEditor);
   if (!activeEditor) return;
 
   const currentFilePath = path.dirname(activeEditor.document.fileName);

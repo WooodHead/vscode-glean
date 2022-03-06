@@ -51,7 +51,6 @@ export class CompleteActionProvider implements vscode.CodeActionProvider {
       }];
     }
 
-    console.log('isJSX(text)', isJSX(text));
     if (isJSX(text)) {
       return [{
         command: 'extension.glean.react.extract-component-to-file',

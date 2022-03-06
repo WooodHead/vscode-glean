@@ -134,13 +134,7 @@ export async function extractJSXToComponentToFile() {
   try {
     // const folderPath = await showDirectoryPicker();
     const folderPath = currentEditorPath()
-    console.log('folderPath', folderPath);
     const filePath = await showFilePicker(folderPath);
-    console.log('filePath', filePath);
-
-    const fullPath = path.join(folderPath, filePath)
-    console.log('fullPath', fullPath);
-    createFileIfDoesntExist(fullPath)
 
     const componentName = produceComponentNameFrom(filePath);
     const selectionProccessingResult = await wrapWithComponent(
