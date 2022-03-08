@@ -118,7 +118,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "build": "vsce package -o ./packages",
+    "build": "npm run compile && vsce package -o ./packages",
     "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "semantic-release": "semantic-release"
   },
@@ -151,6 +151,7 @@
     "gitignore-to-glob": "^0.3.0",
     "glob": "^7.2.0",
     "line-column": "^1.0.2",
+    "lru-cache": "^7.4.1",
     "mkdirp": "^1.0.4",
     "prepend": "^1.0.2",
     "prepend-file": "^2.0.1",
