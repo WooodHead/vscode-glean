@@ -1,3 +1,9 @@
+# Notice
+This extension is just for personal use, modified with global shortcuts.
+
+Please reference the origin extension here: 
+https://marketplace.visualstudio.com/items?itemName=wix.glean&ssr=false#overview
+
 <p align="center">
   <img src="https://github.com/wix/vscode-glean/blob/master/assets/github_logo.png?raw=true">
 </p>
